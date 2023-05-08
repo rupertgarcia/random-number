@@ -6,17 +6,16 @@ class Program
     {
         // Generate a random number between 1 and 100
         Random random = new Random();
-        int randomNumber = rand.Next(01, 101)
+        int randomNumber = random.Next(1, 101);
 
         Console.WriteLine("Guess a number between 1 and 100:");
-
         int guess = 0;
         int numberOfGuesses = 0;
 
-        // Loop until player guesses the right number
+        // Loop until the player guesses the correct number
         while (guess != randomNumber)
         {
-            // Ges the player's guess
+            // Get the player's guess
             string input = Console.ReadLine();
             if (!int.TryParse(input, out guess))
             {
@@ -27,16 +26,16 @@ class Program
             // Count the number of guesses
             numberOfGuesses++;
 
-            //Check if the guess is too high, low, or correct
+            // Check if the guess is too low, too high, or correct
             if (guess < randomNumber)
             {
-                Console.WriteLine("Too High. Guess again: ");
+                Console.WriteLine("Too low. Guess again:");
             }
             else if (guess > randomNumber)
             {
-                Console.WriteLine("Too Low. Guess again: ");
+                Console.WriteLine("Too high. Guess again:");
             }
-            else (guess = randomNumber)
+            else
             {
                 Console.WriteLine("Congratulations, you guessed the number!");
                 Console.WriteLine("Number of guesses: " + numberOfGuesses);
