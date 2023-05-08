@@ -8,7 +8,7 @@ class Program
         Random random = new Random();
         int randomNumber = rand.Next(01, 101)
 
-        Console.WriteLine("Guess a number between 1 and 100:")
+        Console.WriteLine("Guess a number between 1 and 100:");
 
         int guess = 0;
         int numberOfGuesses = 0;
